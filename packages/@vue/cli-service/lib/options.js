@@ -36,6 +36,7 @@ const schema = createSchema(joi => joi.object({
 
   // css
   css: joi.object({
+    requireModuleExtension: joi.boolean(),
     extract: joi.alternatives().try(joi.boolean(), joi.object()),
     sourceMap: joi.boolean(),
     loaderOptions: joi.object({
